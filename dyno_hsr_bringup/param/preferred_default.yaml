@@ -1,0 +1,5 @@
+# Uncomment and modify below to explicitly set the preferred
+# implementation for an ancestor rapp specification:
+preferred:
+  'dyno_hsr_rapps/waypoint_navigation': 'dyno_hsr_rapps/waypoint_navigation'
+  'dyno_hsr_rapps/exploration':         'dyno_hsr_rapps/exploration'

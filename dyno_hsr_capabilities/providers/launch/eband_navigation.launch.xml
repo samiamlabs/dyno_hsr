@@ -1,0 +1,5 @@
+<launch>
+  
+  <include file="$(find dyno_hsr_navigation)/launch/move_base.launch"/>
+
+</launch>

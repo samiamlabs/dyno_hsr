@@ -1,0 +1,32 @@
+<launch>
+  <arg name="sec_idle" default="3.0" />
+  <arg name="use_base_odom" default="false" />
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find dyno_hsr_control)/config/hsr_controllers.yaml" command="load"/>
+  <rosparam file="$(find dyno_hsr_control)/config/joint_state_controller.yaml" command="load"/>
+
+  <!-- Controllers that come up started -->
+
+  <node
+    name="hsr_controllers_spawner"
+    pkg="controller_manager"
+    type="spawner"
+    output="screen"
+    args="--timeout 120
+            joint_state_controller
+            head_pan_joint_position_controller
+            head_tilt_joint_position_controller
+            arm_lift_joint_position_controller
+            "/>
+
+            <!--
+            arm_flex_joint_position_controller
+            arm_roll_joint_position_controller
+            wrist_flex_joint_position_controller
+            wrist_roll_joint_position_controller
+            hand_motor_joint_position_controller
+            hand_l_spring_proximal_joint_position_controller
+            hand_r_spring_proximal_joint_position_controller
+             -->
+</launch>

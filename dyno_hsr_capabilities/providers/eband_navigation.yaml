@@ -1,0 +1,11 @@
+%YAML 1.1
+---
+name: eband_navigation
+spec_version: 1
+spec_type: provider
+implements: dyno_hsr_capabilities/Navigation
+depends_on:
+   ['dyno_hsr_capabilities/RobotStatePublisher',
+    'dyno_hsr_capabilities/MobileBase',
+    'dyno_hsr_capabilities/Localization']
+launch_file: 'launch/eband_navigation.launch.xml'

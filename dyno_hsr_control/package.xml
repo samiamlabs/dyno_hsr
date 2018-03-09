@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>dyno_hsr_control</name>
+  <version>0.0.0</version>
+  <description>The dyno_hsr_control package</description>
+
+  <maintainer email="samuellindgren91@gmail.com">Samuel Lindgren</maintainer>
+
+
+  <license>BSD</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>hsr_description</depend>
+
+  <depend>controller_manager</depend>
+
+  <depend>joint_state_controller</depend>
+  <depend>position_controllers</depend>
+  <depend>effort_controllers</depend>
+  <depend>velocity_controllers</depend>
+
+  <export>
+
+  </export>
+</package>
