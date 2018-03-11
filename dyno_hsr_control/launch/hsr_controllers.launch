@@ -13,14 +13,18 @@
     pkg="controller_manager"
     type="spawner"
     output="screen"
+    ns="/hsrb"
     args="--timeout 120
             joint_state_controller
-            head_pan_joint_position_controller
-            head_tilt_joint_position_controller
-            arm_lift_joint_position_controller
+            arm_trajectory_controller
+            gripper_trajectory_controller
+            head_trajectory_controller
             "/>
 
             <!--
+            head_pan_joint_position_controller
+            head_tilt_joint_position_controller
+            arm_lift_joint_position_controller
             arm_flex_joint_position_controller
             arm_roll_joint_position_controller
             wrist_flex_joint_position_controller

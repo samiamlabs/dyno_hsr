@@ -10,6 +10,11 @@ required_capabilities:
       topics:
         requires: []
         provides: []
+  - name: dyno_hsr_capabilities/ObjectManipulation
+    interface:
+      topics:
+        requires: []
+        provides: []
   - name: dyno_hsr_capabilities/Diagnostics
     interface:
       topics:

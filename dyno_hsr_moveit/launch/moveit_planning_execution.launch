@@ -1,0 +1,11 @@
+<launch>
+
+  <remap from="/joint_states" to="/hsrb/joint_states"/>
+
+  <include file="$(find dyno_hsr_moveit)/launch/move_group.launch">
+    <arg name="publish_monitored_planning_scene" value="true" />
+  </include>
+<!--
+  <include file="$(find dyno_hsr_moveit)/launch/moveit_rviz.launch"/>
+ -->
+</launch>

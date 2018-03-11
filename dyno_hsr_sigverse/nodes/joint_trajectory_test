@@ -1,0 +1,63 @@
+#! /usr/bin/env python
+
+import rospy
+
+import actionlib
+from control_msgs.msg import *
+from trajectory_msgs.msg import *
+
+
+class JointTrajectoryTest:
+    def __init__(self):
+        rospy.init_node('joint_trajectory_test')
+
+        self.arm_trajectory_pub = rospy.Publisher(
+            'hsrb/arm_trajectory_controller/command',
+            JointTrajectory, queue_size=10)
+
+        rospy.sleep(0.1)
+
+        arm_joint_trajectory = JointTrajectory()
+
+        arm_joint_trajectory.joint_names = [
+            "arm_lift_joint",
+            "arm_flex_joint",
+            "arm_roll_joint",
+            "wrist_flex_joint",
+            "wrist_roll_joint"]
+
+        arm_joint_trajectory_point = JointTrajectoryPoint()
+        arm_joint_trajectory_point.positions = [0.2, 0.1, 0.4, 0.0, 0.0]
+        arm_joint_trajectory_point.time_from_start = rospy.Duration(0.0)
+        arm_joint_trajectory.points.append(arm_joint_trajectory_point)
+
+        arm_joint_trajectory_point = JointTrajectoryPoint()
+        arm_joint_trajectory_point.positions = [0.2, 0.1, 0.4, 0.0, 0.0]
+        arm_joint_trajectory_point.time_from_start = rospy.Duration(1.0)
+        arm_joint_trajectory.points.append(arm_joint_trajectory_point)
+
+        arm_joint_trajectory_point = JointTrajectoryPoint()
+        arm_joint_trajectory_point.positions = [0.0, 0.0, 0.0, 0.0, 0.0]
+        arm_joint_trajectory_point.time_from_start = rospy.Duration(2.0)
+        arm_joint_trajectory.points.append(arm_joint_trajectory_point)
+
+        arm_joint_trajectory_point = JointTrajectoryPoint()
+        arm_joint_trajectory_point.positions = [0.1, 0.5, 0.0, 0.0, 0.0]
+        arm_joint_trajectory_point.time_from_start = rospy.Duration(4.0)
+        arm_joint_trajectory.points.append(arm_joint_trajectory_point)
+
+
+        self.arm_trajectory_pub.publish(arm_joint_trajectory)
+
+        # rospy.sleep(1.0)
+
+
+        # arm_joint_trajectory_point = JointTrajectoryPoint()
+        # arm_joint_trajectory_point.positions = [0.1, 0.2, 0.4, 0.0, 0.0]
+        # arm_joint_trajectory_point.time_from_start = rospy.Duration(0.0)
+        # arm_joint_trajectory.points[0] = arm_joint_trajectory_point
+        # self.arm_trajectory_pub.publish(arm_joint_trajectory)
+
+if __name__ == '__main__':
+    joint_trajectory_test = JointTrajectoryTest()
+    # rospy.spin()

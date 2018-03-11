@@ -1,0 +1,17 @@
+controller_list:
+  - name: fake_arm_controller
+    joints:
+      - arm_lift_joint
+      - arm_flex_joint
+      - arm_roll_joint
+      - wrist_flex_joint
+      - wrist_roll_joint
+  - name: fake_hand_controller
+    joints:
+      - hand_l_spring_proximal_joint
+      - hand_motor_joint
+      - hand_r_spring_proximal_joint
+  - name: fake_head_controller
+    joints:
+      - head_pan_joint
+      - head_tilt_joint

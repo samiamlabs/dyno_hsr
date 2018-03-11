@@ -1,0 +1,24 @@
+<launch>
+
+  <node name="arm_trajectory_action_server" pkg="dyno_hsr_sigverse" type="joint_trajectory_action_server">
+    <rosparam>
+      command_topic: hsrb/arm_trajectory_controller/command
+      action_topic: hsrb/arm_trajectory_controller/follow_joint_trajectory
+    </rosparam>
+  </node>
+
+  <node name="head_trajectory_action_server" pkg="dyno_hsr_sigverse" type="joint_trajectory_action_server">
+    <rosparam>
+      command_topic: hsrb/head_trajectory_controller/command
+      action_topic: hsrb/head_trajectory_controller/follow_joint_trajectory
+    </rosparam>
+  </node>
+
+  <node name="gripper_trajectory_action_server" pkg="dyno_hsr_sigverse" type="joint_trajectory_action_server">
+    <rosparam>
+      command_topic: hsrb/gripper_trajectory_controller/command
+      action_topic: hsrb/gripper_trajectory_controller/follow_joint_trajectory
+    </rosparam>
+  </node>
+
+</launch>

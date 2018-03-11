@@ -1,6 +1,7 @@
 <launch>
+<!--
+  <remap from="/joint_states" to="/hsrb/joint_states"/>
+ -->
 
-  <node name="robot_state_publisher" pkg="robot_state_publisher"
-        type="state_publisher"/>
-
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 </launch>

@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: hsr_description
+    relative_path: robots/hsrb4s.urdf.xacro
+  SRDF:
+    relative_path: config/hsrb.srdf
+  CONFIG:
+    author_name: Samuel Lindgren
+    author_email: samuellindgren91@gmail.com
+    generated_timestamp: 1520754428

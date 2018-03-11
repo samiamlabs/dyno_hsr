@@ -1,6 +1,5 @@
 <launch>
-  <arg name="configuration_basename"/>
-  <arg name="load_state_filename" default="$(find dyno_hsr_localization)/states/sigverse.pbstream"/>
+  <arg name="configuration_basename" default="cartographer_base_lidar.lua"/>
 
   <node
     name="cartographer_node"
@@ -9,8 +8,7 @@
     args="
           -configuration_directory
               $(find dyno_hsr_localization)/config/cartographer
-          -configuration_basename $(arg configuration_basename)
-          -load_state_filename $(arg load_state_filename)"
+          -configuration_basename $(arg configuration_basename)"
     output="screen">
 
     <remap from="points2" to="/hsrb/head_rgbd_sensor/depth_registered/rectified_points"/>

@@ -36,7 +36,15 @@
     </capability_provider>
 
     <capability_provider>
+      providers/cartographer_mapping_2d.yaml
+    </capability_provider>
+
+    <capability_provider>
       providers/cartographer_localization_3d.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/fake_localization.yaml
     </capability_provider>
 
     <capability_interface>
@@ -53,6 +61,18 @@
 
     <capability_provider>
       providers/diagnostics.yaml
+    </capability_provider>
+
+    <capability_interface>
+      interfaces/ObjectManipulation.yaml
+    </capability_interface>
+
+    <capability_provider>
+      providers/moveit.yaml
+    </capability_provider>
+
+    <capability_provider>
+      providers/moveit_octomap.yaml
     </capability_provider>
   </export>
 

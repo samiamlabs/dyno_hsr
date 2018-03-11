@@ -19,6 +19,8 @@ base_local_planner: "eband_local_planner/EBandPlannerROS" #alternatives "dwa_loc
 
 base_global_planner: "global_planner/GlobalPlanner" #alternatives: navfn/NavfnROS, global_planner/GlobalPlanner, carrot_planner/CarrotPlanner guidebot_navigation/LinefollowPlanner
 
+clearing_rotation_allowed: false
+
 EBandPlannerROS:
    xy_goal_tolerance: 0.03
    yaw_goal_tolerance: 0.05
