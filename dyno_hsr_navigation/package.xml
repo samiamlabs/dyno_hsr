@@ -19,6 +19,7 @@
   <depend>costmap_2d</depend>
   <depend>pluginlib</depend>
   <depend>nav_core</depend>
+  <depend>map_server</depend>
 
   <depend>dwa_local_planner</depend>
   <depend>base_local_planner</depend>
