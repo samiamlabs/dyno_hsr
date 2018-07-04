@@ -3,6 +3,6 @@ defaults:
   'dyno_hsr_capabilities/DifferentialMobileBase': 'dyno_hsr_capabilities/differential_mobile_base'
   'dyno_hsr_capabilities/RobotStatePublisher':    'dyno_hsr_capabilities/robot_state_publisher'
   'dyno_hsr_capabilities/Navigation':             'dyno_hsr_capabilities/eband_navigation'
-  'dyno_hsr_capabilities/Localization':           'dyno_hsr_capabilities/cartographer_localization_2d'
+  'dyno_hsr_capabilities/Localization':           'dyno_hsr_capabilities/fake_localization'
   'dyno_hsr_capabilities/Diagnostics':            'dyno_hsr_capabilities/diagnostics'
   'dyno_hsr_capabilities/ObjectManipulation':     'dyno_hsr_capabilities/moveit'

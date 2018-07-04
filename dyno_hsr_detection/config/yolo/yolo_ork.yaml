@@ -1,0 +1,20 @@
+yolo_model:
+
+  config_file:
+    name: yolo-ork.cfg
+  weight_file:
+    name: yolo-ork.weights
+  threshold:
+    value: 0.25
+  detection_classes:
+    names:
+      - cup
+      - cannedjuice
+      - sugar
+      - coke
+      - duck
+      - dog
+      - bear
+      - rabbit
+      - tumblerglass
+      - apple

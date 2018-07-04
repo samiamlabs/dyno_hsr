@@ -30,9 +30,9 @@
     <remap from="twist"  to="$(arg cmd_vel_out)"/>
     <remap from="marker" to="twist_marker"/>
   </node>
-
+<!--
   <include file="$(find dyno_hsr_control)/launch/hsr_controllers.launch"/>
-
+ -->
   <!-- Teleop -->
   <include file="$(find dyno_hsr_navigation)/launch/joystick_teleop.launch"/>
 
