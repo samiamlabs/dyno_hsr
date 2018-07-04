@@ -1,5 +1,11 @@
 <launch>
+
+  <!-- Replace fake diagnistics with separate nodes for each piece of hardware to allow using standard diagnostic updater package -->
+  <!-- 
   <node pkg="dyno_hsr_gazebo" type="fake_diagnostics" name="fake_diagnostic"/>
+  -->
+
+
   <node pkg="diagnostic_common_diagnostics" type="cpu_monitor.py" name="cpu_monitor"/>
   <node pkg="diagnostic_common_diagnostics" type="tf_monitor.py" name="tf_monitor"/>
 
