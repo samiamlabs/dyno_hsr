@@ -49,4 +49,9 @@
 
 # On Windows computer with Unity:
   Download: https://github.com/samiamlabs/sigverse_unity_project.git
-  Open project in Unity. Set Rosbridge IP to that of ROS computer (SIGVerse => SIGVerse Settings). Press play button.
+  
+  Open project in Unity. 
+  
+  Set Rosbridge IP to that of ROS computer (SIGVerse => SIGVerse Settings). 
+  
+  Press play button.
