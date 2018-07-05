@@ -1,18 +1,19 @@
 ## Setup
 
 ### Use rosinstall for ros packages
+```bash:
+  mkdir hsr_ws && cd hsr_ws
 
-mkdir hsr_ws && cd hsr_ws
+  wstool init src https://github.com/samiamlabs/dyno_hsr_install/raw/master/dyno_hsr.rosinstall
 
-wstool init src https://github.com/samiamlabs/dyno_hsr_install/raw/master/dyno_hsr.rosinstall
+  cd src && wstool update -j8
 
-cd src && wstool update -j8
+  cd .. && rosdep install --from-paths src -i -y
 
-cd .. && rosdep install --from-paths src -i -y
+  catkin_make
 
-catkin_make
-
-source devel/setup.bash
+  source devel/setup.bash
+```
 
 ## Dependencies for sigverse_ros_bridge
 ### Install Mongo C Driver
@@ -40,5 +41,12 @@ source devel/setup.bash
   sudo make install
 ```
 
-
 ## How to use
+# On Linux computer with ROS:
+```bash:
+  roslaunch dyno_hsr_sigverse concert_client.launch
+```
+
+# On Windows computer with Unity:
+  Download: https://github.com/samiamlabs/sigverse_unity_project.git
+  Open project in Unity. Set Rosbridge IP to that of ROS computer (SIGVerse => SIGVerse Settings). Press play button.
