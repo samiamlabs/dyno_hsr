@@ -42,12 +42,12 @@
 ```
 
 ## How to use
-# On Linux computer with ROS:
+### On Linux computer with ROS:
 ```bash:
   roslaunch dyno_hsr_sigverse concert_client.launch
 ```
 
-# On Windows computer with Unity:
+### On Windows computer with Unity:
   Download: https://github.com/samiamlabs/sigverse_unity_project.git
   
   Open project in Unity. 
