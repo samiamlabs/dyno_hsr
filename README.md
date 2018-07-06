@@ -48,7 +48,7 @@
 ```
 
 ### On Windows computer with Unity:
-  Download: https://github.com/samiamlabs/sigverse_unity_project.git
+  Download: https://github.com/samiamlabs/common-unity.git
   
   Open project in Unity. 
   
